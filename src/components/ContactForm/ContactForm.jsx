@@ -3,8 +3,9 @@ import { useDispatch } from "react-redux";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { nanoid } from "nanoid";
 import * as Yup from "yup";
-import style from "./ContactForm.module.css";
+
 import { addContact } from "../../redux/slices/contactsSlice";
+import style from "./ContactForm.module.css";
 
 const initialValues = {
   id: "",
