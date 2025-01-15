@@ -16,7 +16,7 @@ const initialValues = {
 const FormValidation = Yup.object().shape({
   name: Yup.string().min(3, "Too Short!").required("Name is required"),
   number: Yup.string()
-    .matches(/^[\d\s\+\-\(\)]*$/, "Number cannot contain letters!")
+    .matches(/^[\d\s+\-()]*$/, "Number cannot contain letters!")
     .min(5, "Too short!")
     .max(18, "Too Long!")
     .required("Number is required"),

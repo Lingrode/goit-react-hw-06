@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { FaUser, FaPhoneAlt } from "react-icons/fa";
+import PropTypes from "prop-types";
 
 import { deleteContact } from "../../redux/slices/contactsSlice";
 import style from "./Contact.module.css";
@@ -24,6 +25,12 @@ const Contact = ({ name, number, id }) => {
       </button>
     </div>
   );
+};
+
+Contact.propTypes = {
+  name: PropTypes.string,
+  number: PropTypes.string,
+  id: PropTypes.string,
 };
 
 export default Contact;
